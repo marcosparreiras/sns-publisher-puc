@@ -1,6 +1,6 @@
 import { env } from "../env";
 import { SNSPublishException } from "../exceptions/sns-publish-exception";
-import type { MessagePublisher } from "./message-publisher";
+import type { MessagePublisher } from "../appilcation/bondaries/message-publisher";
 import { SNS } from "aws-sdk";
 
 export class SNSMessagePublisher implements MessagePublisher {

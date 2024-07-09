@@ -1,8 +1,8 @@
 import fastify from "fastify";
 import { errorHandler } from "./middlewares/errorHandler";
-import { PublishUrlRoute } from "./routes/publish-url-route";
+import { publishNFERoute } from "./routes/publish-nfe-route";
 
 export const app = fastify();
 
-app.register(PublishUrlRoute);
+app.register(publishNFERoute);
 app.setErrorHandler(errorHandler);

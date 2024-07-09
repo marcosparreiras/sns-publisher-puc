@@ -7,8 +7,6 @@ export async function errorHandler(
   _request: FastifyRequest,
   reply: FastifyReply
 ) {
-  console.log(error);
-
   if (error instanceof ZodError) {
     return reply.status(400).send({ message: error.format() });
   }
