@@ -20,6 +20,6 @@ export async function publishNFERoute(app: FastifyInstance) {
       url,
     });
 
-    return reply.status(201).send(null);
+    return reply.status(201).send({ success: true });
   });
 }
