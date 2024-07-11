@@ -1,4 +1,4 @@
-# Simple HTTP Service to Post Urls to a AWS SNS Topic
+# Simple HTTP Service to Post NFE Urls to a AWS SNS Topic
 
 Build with NodeJs, Typescript and Fastify
 
@@ -12,8 +12,8 @@ git clone https://github.com/marcosparreiras/sns-publisher-puc.git
 
 2. Install the dependencies:
 
-```
-npm install
+```bash
+cd ./sns-publisher-puc && npm install
 ```
 
 3. Rename the `.env.sample` file to `.env` and fill in the required information.
@@ -22,6 +22,8 @@ npm install
 
 ```bash
 npm run dev
+
+curl -s -X POST -H "Content-Type: application/json" -d '{"url": "[URL-HERE]"}' http://localhost:3333/nfe # to post a nfe url
 ```
 
 Or test the application with:
